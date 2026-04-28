@@ -1,13 +1,12 @@
 /* Colores principales */
 :root {
-    --blue-main: #4facfe;
-    --blue-light: #00f2fe;
-    --purple-main: #7f00ff;
-    --purple-light: #c471f5;
-    --accent: #aab8ff;
+    --blue-main: #a7c7ff;     /* azul pastel */
+    --blue-light: #c6e7ff;    /* celeste pastel */
+    --blue-soft: #dff3ff;     /* extra suave */
+    --accent: #b8d4ff;
     --white: #ffffff;
-    --background-overlay: rgba(0, 0, 0, 0.2);
-    --card-background: rgba(255, 255, 255, 0.1);
+    --background-overlay: rgba(0, 0, 0, 0.15);
+    --card-background: rgba(255, 255, 255, 0.25);
     --border-radius: 20px;
     --transition: all 0.3s ease;
 }
@@ -35,15 +34,14 @@
 }
 
 body {
-    background: linear-gradient(270deg, var(--blue-main), var(--purple-main), var(--blue-light), var(--purple-light));
-    background-size: 800% 800%;
-    animation: waveGradient 15s ease infinite;
+    background: linear-gradient(270deg, var(--blue-main), var(--blue-light), var(--blue-soft));
+    background-size: 600% 600%;
+    animation: waveGradient 18s ease infinite;
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Efecto de oleaje extra */
 body::before {
     content: "";
     position: fixed;
@@ -51,9 +49,9 @@ body::before {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 40%),
-                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.08), transparent 40%);
-    animation: floatBg 20s infinite linear;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.15), transparent 50%);
+    animation: floatBg 25s infinite linear;
     z-index: -1;
 }
 
@@ -246,7 +244,7 @@ body::before {
 
 .feature-card:hover {
     transform: translateY(-10px) scale(1.02);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(167, 199, 255, 0.4)
     border-color: var(--accent);
     box-shadow: 0 15px 35px rgba(127, 0, 255, 0.2);
 }
